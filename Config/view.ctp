@@ -55,6 +55,11 @@
                      <td><i>Par defaut : #</i></td>
                      <td><input type="text" class="form-control" name="logo_site" value="<?= $theme_config['logo_site'] ?>"></td>
                    </tr>
+                   <tr>
+                     <td>Favicon</td>
+                     <td><i>Par defaut : #</i></td>
+                     <td><input type="text" class="form-control" name="favicon_url" value="<?= $theme_config['favicon_url'] ?>"></td>
+                   </tr>
                  </table>
                </div>
             </div>

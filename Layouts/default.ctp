@@ -13,7 +13,7 @@
     <meta name="twitter:site" content="<?= $theme_config['twitter'] ?>"/>
     <meta name="twitter:title" content="<?= $theme_config['name_site'] ?>"/>
     <meta name="twitter:description" content="<?= $theme_config['desc_site'] ?>"/>
-
+    <link rel="icon" type="image/png" href="<?= (isset($theme_config) && isset($theme_config['favicon_url'])) ? $theme_config['favicon_url'] : '' ?>" />
     <title><?= $title_for_layout ?> - <?= $theme_config['name_site'] ?></title>
 
     <?= $this->Html->css('bootstrap.min.css') ?>
@@ -49,6 +49,7 @@
 				<p><?= $theme_config['desc_site'] ?></p>
 			</div>
 			<div class="col-md-4">
+            <?php if(!$EyPlugin->isInstalled('eywek.shop')) { ?>
                 <h2 class="text-uppercase">Meilleurs Votants</h2>
 				<div class="voters-all">
                     <?php $users_vote = ClassRegistry::init('Vote.Vote')->find('all', [
@@ -73,6 +74,7 @@
 					</div>
                 <?php endforeach; ?> 
                 </div>
+            <?php } ?>
             </div>
 			<div class="col-md-4">
 				<h2 class="text-uppercase">Réseaux sociaux</h2>

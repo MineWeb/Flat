@@ -57,8 +57,13 @@
                     <?php if(!$isConnected) { ?>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="dropdown" aria-expanded="false">Espace Membre <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-							<li><a href="#login" data-toggle="modal"><?= $Lang->get('USER__LOGIN') ?></a></li>
-                            <li><a href="#register" data-toggle="modal"><?= $Lang->get('USER__REGISTER') ?></a></li>
+                            <?php if($EyPlugin->isInstalled('phpierre.signinup')) { ?>
+                                <li><a href="/login"><?= $Lang->get('USER__LOGIN') ?></a></li>
+                                <li><a href="/register"><?= $Lang->get('USER__REGISTER') ?></a></li>
+                            <?php } else { ?>
+                                <li><a href="#login" data-toggle="modal"><?= $Lang->get('USER__LOGIN') ?></a></li>
+                                <li><a href="#register" data-toggle="modal"><?= $Lang->get('USER__REGISTER') ?></a></li>
+                            <?php } ?>
                         </ul>
                     <?php } ?>
                 </li>

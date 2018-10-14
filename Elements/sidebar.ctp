@@ -12,7 +12,7 @@
 					<i class="fa fa-gift" aria-hidden="true"></i> <b>SOON</b> Votes
 					<br>
 					<a class="btn btn-default btn-sm btn-block" href="#notifications_modal" onclick="notification.markAllAsSeen(2)" data-toggle="modal"><i class="fa fa-flag"></i> <?= $Lang->get('NOTIFICATIONS__LIST') ?><span class="notification-indicator"></span></a>
-					<a class="btn btn-default btn-sm btn-block" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>" data-toggle="modal"><i class="fa fa-user"></i> <?= $Lang->get('USER__PROFILE') ?></a>
+					<a class="btn btn-default btn-sm btn-block" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>"><i class="fa fa-user"></i> <?= $Lang->get('USER__PROFILE') ?></a>
 					<a class="btn btn-default btn-sm btn-block" href="<?= $this->Html->url(array('controller' => 'user', 'action' => 'logout', 'plugin' => null)) ?>"><i class="fa fa-power-off"></i> <?= $Lang->get('USER__LOGOUT') ?></a>
                     <?php if($Permissions->can('ACCESS_DASHBOARD')) { ?>
                     <a class="btn btn-warning btn-sm btn-block" href="<?= $this->Html->url(array('controller' => '', 'action' => 'index', 'plugin' => 'admin')) ?>"><i class="fa fa-cogs"></i> <?= $Lang->get('GLOBAL__ADMIN_PANEL') ?></a>
